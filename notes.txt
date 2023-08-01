@@ -1,0 +1,26 @@
+
+Migrations
+---------------
+We needed to search nuget dotnet-ef and install it in order to allow us to migrate:
+    using the following command:
+        dotnet tool install --global dotnet-ef --version 7.0.9
+    We can also use this command to see the list of tools we have installed:
+        dotnet tool list -g
+
+We then use this command to migrate:
+    dotnet ef migrations add InitialCreate -o Data/Migrations
+
+    This will create the migrations folder in the Data folder
+
+Creating Database
+----------------------
+To create the database:
+    dotnet ef database update 
+
+-Note we need the SQLite extension to view the database.
+-Now in the explorer tab we can see the SQLITE explorer tab.
+
+Controllers
+--------------
+
+
