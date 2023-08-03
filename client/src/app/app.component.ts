@@ -23,10 +23,11 @@ export class AppComponent  implements OnInit{
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
-    this.http.get('https://localhost:5001/api/users').subscribe({{
+    this.http.get('https://localhost:5001/api/users').subscribe({
       next: response => this.users = response,
-      eorror: () =>
-    }});
+      error: error =>console.log(error),
+      complete: () =>console.log("res has completed")
+    });
   } 
 
 }
